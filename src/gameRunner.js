@@ -28,7 +28,7 @@ function runGame({ prisonersCount = 100, strategyType = Prisoner.strategyTypes.r
   const room = new Room({prisonersCount});
 
   for (let i = 0; i < prisonersCount; i++) {
-    prisoners.push(new Prisoner({number: i, strategyType}));
+    prisoners.push(new Prisoner({number: i, strategyType, attemptsCount: prisonersCount / 2}));
   }
 
   for (let prisoner of prisoners) {
